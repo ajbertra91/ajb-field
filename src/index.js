@@ -6,7 +6,8 @@ import '../src/ajb-field';
   function component() {
     var div = document.createElement('div');
     var ajbField = document.createElement('ajb-field');
-    ajbField.setAttribute('type','number')
+    ajbField.setAttribute('type','dollar');
+    ajbField.setAttribute('label', 'Salary');
  
     div.appendChild(ajbField);
 

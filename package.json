@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dom-delegate": "^2.2.0",
     "hyperhtml": "^2.20.2"
   },
   "devDependencies": {

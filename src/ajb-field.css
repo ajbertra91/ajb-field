@@ -1,6 +1,72 @@
+ajb-field .ajb-field__container {
+	display: inline-block;
+	position: relative;
+	background: white;
+}
+
 ajb-field label {
+	position: absolute;
 	display: block;
+	font-size: 18px;
+    font-family: helvetica;
+    font-weight: 100;
+    top: 15px;
+    left: 10px;
+    z-index: 0;
+    transform-origin: left;
+    transform: translate3d(0,0,0) scale(1);
+    transition: transform 0.2s ease-in-out;
 }
 ajb-field input {
+	background: transparent;
 	display: block;
+	padding: 15px 10px 5px;
+    font-size: 20px;
+    font-family: helvetica;
+    font-weight: 100;
+    border: 0;
+    border-bottom: 1px solid #333;
+    position: relative;
+    z-index: 1;
+}
+ajb-field input:focus {
+	outline: none;
+}
+
+ajb-field input:focus + label {
+	color: #333;
+	transform-origin: left;
+	transform: translate3d(0,-18px,0) scale(0.65);
+	transition: transform 0.2s ease-in-out;
+}
+
+ajb-field .has-value input + label {
+	color: green;
+	transform-origin: left;
+	transform: translate3d(0,-18px,0) scale(0.65);
+	transition: transform 0.2s ease-in-out;
+}
+
+ajb-field .has-value input {
+	color: green;
+}
+
+ajb-field .has-errors input + label {
+	color: red;
+	transform-origin: left;
+	transform: translate3d(0,-18px,0) scale(0.65);
+	transition: transform 0.2s ease-in-out;
+}
+
+ajb-field .has-errors input {
+	color: pink;
+}
+
+ajb-field .errors {
+    font-family: helvetica;
+    font-weight: 100;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: red;
 }
