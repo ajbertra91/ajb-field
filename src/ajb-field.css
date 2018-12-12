@@ -1,3 +1,6 @@
+.container {
+    display: block;
+}
 ajb-field .ajb-field__container {
 	display: inline-block;
 	position: relative;
@@ -29,6 +32,13 @@ ajb-field input {
     position: relative;
     z-index: 1;
 }
+
+/*ajb-field input[type=number]::-webkit-inner-spin-button,
+ajb-field input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}*/
+
 ajb-field input:focus {
 	outline: none;
 }
